@@ -1,0 +1,12 @@
+I followed the tutorial "How to Create a Voice Recognition System with Python" to create a voice recognition system with python.
+
+Link to the tutorial: https://reintech.io/blog/how-to-create-a-voice-recognition-system-with-python
+
+create virtual environment
+
+// install libraries
+pip install SpeechRecognition
+pip install PyAudio
+
+create a python file
+
