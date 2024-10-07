@@ -2,11 +2,64 @@ I followed the tutorial "How to Create a Voice Recognition System with Python" t
 
 Link to the tutorial: https://reintech.io/blog/how-to-create-a-voice-recognition-system-with-python
 
-create virtual environment
-
-// install libraries
+// install libraries(in the virtual environment if there is one)
 pip install SpeechRecognition
 pip install PyAudio
 
 create a python file
 
+--------
+If you get the following error
+
+    in get_pyaudio
+        from distutils.version import LooseVersion
+    ModuleNotFoundError: No module named 'distutils'
+
+Try to do "pip install setuptools" in cmd while still in the virtual environment
+
+-------
+
+For speech, there are other options
+ex:"The Ultimate Guide To Speech Recognition With Python" lists out a other methods, include one that works offline. 
+    https://realpython.com/python-speech-recognition/#the-recognizer-class
+
+
+
+if "hello" in text.lower():
+    => Make the text all lower case to avoid future issues.
+
+==========
+Note, to show items in a folder, use cmd "dir" ("ls" is for Lunix)
+To stop the program from running(kill it), use Ctrl + C
+============================
+create virtual environment(optional, but recommended)
+    =>Navigate to the directory where the repository was cloned
+            cd path_name
+    =>Create a Virtual Environment named venv
+            python -m venv venv
+    =>Activate the virtual environment (on Windows)
+        🎀-----------------------🎀
+            venv\Scripts\activate
+        🎀-----------------------🎀
+            should see the (venv) in cmd
+
+    🦄to deactivate the virtual environment, just type in
+    🎀-----------------------🎀
+        deactivate
+        or
+        venv\Scripts\deactivate
+    🎀-----------------------🎀
+
+!!! Generally not advisable to share the env folder
+=>In project directory, create a file named .gitignore.
+        🦄On windows, can stay in virtual environment and type
+        ------
+        echo. > .gitignore
+        ------
+=>Open the .gitignore file in any text editor (e.g., Notepad, VS Code) and add the paths or patterns you want to ignore.
+        In this case, just add 
+        -----
+        /venv
+        -----
+        inside the file (or /whatever_vertual_envirment_name )
+        save the file
